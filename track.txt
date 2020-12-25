@@ -1,8 +1,3 @@
-# Required entries to send emails:
-sender_email:send@email.com
-sender_email_password:12345678
-recipient_email:me@email.com
-
 # Entry Structure (this has to be in order):
 # title:                <--- title of tracker
 # url:                  <--- webpage url
@@ -22,7 +17,7 @@ recipient_email:me@email.com
 
 
 # Example entry to detect if webpage does not contain HTML element
-title:Ryzen™ 5 5600X Processor, 3.7GHz w/ 6 Cores / 12 Threads
+title:Ryzen 5 5600X Processor, 3.7GHz w/ 6 Cores / 12 Threads
 url:https://www.memoryexpress.com/Products/MX00114455
 check_interval:300
 class_list:c-capr-inventory-store__availability InventoryState_OutOfStock,stock
