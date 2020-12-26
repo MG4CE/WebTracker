@@ -5,8 +5,12 @@
 # - Ensure proper format of file.
 # - Extract relevant information required to run the application i.e. tracking entries and emails. 
 
+# TODO: 
+# - log instead of printing errors and results
+
 EMAIL_PARAMS = ["sender_email", "sender_email_password", "recipient_email"]
 TRACK_PARAMS = ["title", "url", "check_interval", "class_list", "element_title", "check", "message_header", "message_body"]
+TRACK_PARAMS_TYPE_LIST = ["class_list:,"]
 
 def read_file(dir):
     """
@@ -57,6 +61,15 @@ def clean_list(line_list):
     return line_list
 
 def extract_email_input(filename):
+    """
+    Extracts the expected email parameter from a file into a list. 
+
+    Parameters:
+        filename(string): filename of target file.
+
+    Returns:
+        List: the expected input 
+    """
     file = read_file(filename)
     line_list = convert_file_to_list(file)
 
@@ -74,7 +87,32 @@ def extract_email_input(filename):
 
     return email_inputs
 
+def convert_listed_entries_to_list(track_list, index, separation_char):
+    """
+    Converts a given string in a list into a list based on given seperation character.
+
+    Parameters:
+        track_list(list): list containing tracking entry to edit. 
+        index(int): index of target entry in track_list.
+        separation_char(string): the character to seprate the string into list by.
+
+    Returns:
+        List: updated track_list.
+    """
+    track_list[index] = track_list[index].split(separation_char)
+    return track_list
+
 def extract_track_inputs(line_list):
+    """
+    Given a cleaned list of lines from file this function will extract each track 
+    entry and validate that they follow the template given in TRACK_PARAMS.  
+
+    Parameters:
+        line_list(string): cleaned list of lines to be processed
+    
+    Returns:
+        List: each tracking entry as list
+    """
     list_inputs = []
     track_entry = []
     counter = 0
@@ -85,22 +123,15 @@ def extract_track_inputs(line_list):
             track_entry.append(entry[1])
             counter = counter + 1
             if counter % len(TRACK_PARAMS) == 0:
+                for select in TRACK_PARAMS_TYPE_LIST:
+                    select = select.split(":")
+                    track_entry = convert_listed_entries_to_list(track_entry, TRACK_PARAMS.index(select[0]), select[1])
                 list_inputs.append(track_entry)
                 track_entry = []
         else:
             raise Exception("Unexpected track entry, make sure track entries follow template!")
 
     if counter % len(TRACK_PARAMS) != 0:
-        raise Exception("edge case!")
+        raise Exception("Final track entry is incomplete!")
 
     return list_inputs 
-
-def process_track_input(track_list):
-    return []
-
-if __name__ == "__main__":
-    file_list = convert_file_to_list(read_file("track.txt"))
-    file_list = clean_list(file_list)
-    for x in extract_track_inputs(file_list):
-        print(x)
-    print(extract_email_input("config.cfg"))

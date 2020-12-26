@@ -13,7 +13,7 @@
 # not_contains          - trigger if the webpage does not contains the HTML element
 # contains_select=data  - trigger if the webpage element title contains the selected title
 # price_decrease        - trigger if the price detected in the HTML element decreases or changes
-# target_price=10.00    - trigger if the price is equal to or less than targer
+# target_price=10.00    - trigger if the price is equal to or less than targert_price
 
 
 # Example entry to detect if webpage does not contain HTML element

@@ -2,6 +2,9 @@
 # To avoid having your email getting sent to junk, format the 
 # email properly or email yourself.
 
+# TODO: 
+# - log instead of printing errors and results
+
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
