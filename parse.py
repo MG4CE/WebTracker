@@ -1,4 +1,4 @@
-# Parser process the input folder and extracts relevent information to run the application.
+# Parse processes the input folder and extracts relevent information to run the application.
 # Functionality: 
 # - Open, read and close file.
 # - filter out irrelevant information such as empty lines (\n) and comments (#) in file.
@@ -9,8 +9,8 @@
 # - log instead of printing errors and results
 
 EMAIL_PARAMS = ["sender_email", "sender_email_password", "recipient_email"]
-TRACK_PARAMS = ["title", "url", "check_interval", "class_list", "element_title", "check", "message_header", "message_body"]
-TRACK_PARAMS_TYPE_LIST = ["class_list:,"]
+TRACK_PARAMS = ["title", "url", "check_interval", "xpath", "element_title", "check", "message_header", "message_body"]
+TRACK_PARAMS_TYPE_LIST = []
 
 def read_file(dir):
     """

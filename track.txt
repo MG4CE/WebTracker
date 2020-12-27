@@ -2,8 +2,8 @@
 # title=                <--- title of tracker
 # url=                  <--- webpage url
 # check_interval=       <--- time between webpage checks in seconds
-# class_list=           <--- list of HTML classes to navigate nested structures
-# element_title=        <--- title in the elment to check 
+# xpath=           	    <--- xpath location of element to check
+# element_title=        <--- title in the element to check 
 # check=                <--- selected check command
 # message_header=       <--- email header
 # message_body=         <--- body of the message
@@ -13,15 +13,15 @@
 # not_contains          - trigger if the webpage does not contains the HTML element
 # contains_select=data  - trigger if the webpage element title contains the selected title
 # price_decrease        - trigger if the price detected in the HTML element decreases or changes
-# target_price=10.00    - trigger if the price is equal to or less than targert_price
+# target_price=10.00    - trigger if the price is equal to or less than target_price
 
 
 # Example entry to detect if webpage does not contain HTML element
 title=Ryzen 5 5600X Processor, 3.7GHz w/ 6 Cores / 12 Threads
 url=https=//www.memoryexpress.com/Products/MX00114455
 check_interval=300
-class_list=c-capr-inventory-store__availability InventoryState_OutOfStock,stock
-element_title=Out of Stock
+xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]
+title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
@@ -30,7 +30,7 @@ message_body=$url
 title=Dell 2721DGF
 url=https://www.dell.com/en-ca/shop/dell-27-gaming-monitor-s2721dgf/apd/210-axeh/monitors-monitor-accessories
 check_interval=300
-class_list=ps-dell-price ps-simplified
+xpath=/html/body/div[4]/div[1]/div/div/div[4]/div/div/article/section/div[3]/div[1]/div/div
 element_title=CAD $739.99
 check=price_decrease
 message_header=$title decreased to $price
