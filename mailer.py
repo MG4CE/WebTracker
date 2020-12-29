@@ -11,12 +11,13 @@ from email.mime.text import MIMEText
 import datetime
 
 # For SSL
-PORT = 587  
+PORT = 587
 
 # The sender in this case can only be a Gmail account.
 # The senders Gmail account also needs to allow third party 
 # services for SMTP to work.
-SMTP_SERVER = "smtp.gmail.com" 
+SMTP_SERVER = "smtp.gmail.com"
+
 
 def build_message(sender_email, recipient_email, subject, body):
     """
@@ -39,7 +40,8 @@ def build_message(sender_email, recipient_email, subject, body):
     msg.attach(MIMEText(msg_body))
     return msg
 
-def send_email(sender_email, sender_passsword, recipient_email, mesage_subject, message_body):
+
+def send_email(sender_email, sender_passsword, recipient_email, message_subject, message_body):
     """
     Logins into senders email and sends an email to selected recipient email.
    
@@ -53,21 +55,21 @@ def send_email(sender_email, sender_passsword, recipient_email, mesage_subject, 
     Returns:
         Boolean: true if the email was sent successfully, false otherwise.
     """
-    message = build_message(sender_email, recipient_email, mesage_subject, message_body)
+    message = build_message(sender_email, recipient_email, message_subject, message_body)
 
-    try: 
+    try:
         # Connect to the smtp mailing server
         mailserver = smtplib.SMTP(SMTP_SERVER, PORT)
 
         # identify that this client supports ESMTP
-        mailserver.ehlo() 
-    
+        mailserver.ehlo()
+
         # start tls encrypted connection, so sent email is encrypted
         mailserver.starttls()
 
         # identify again (required after encrypted connection is established)
         mailserver.ehlo()
-        
+
         # login and send email
         mailserver.login(sender_email, sender_passsword)
         mailserver.sendmail(sender_email, recipient_email, message.as_string())

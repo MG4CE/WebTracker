@@ -12,6 +12,7 @@ EMAIL_PARAMS = ["sender_email", "sender_email_password", "recipient_email"]
 TRACK_PARAMS = ["title", "url", "check_interval", "xpath", "element_title", "check", "message_header", "message_body"]
 TRACK_PARAMS_TYPE_LIST = []
 
+
 def read_file(dir):
     """
     Opens a file with given directory in read-only mode.
@@ -25,6 +26,7 @@ def read_file(dir):
     file = open(dir, "r")
     return file
 
+
 def convert_file_to_list(file):
     """
     Converts a file object into a list of lines.
@@ -37,6 +39,7 @@ def convert_file_to_list(file):
     """
     return file.readlines()
 
+
 def close_file(file):
     """
     Closeses the given file.
@@ -45,6 +48,7 @@ def close_file(file):
         file (File Object): opened file.
     """
     file.close()
+
 
 def clean_list(line_list):
     """
@@ -59,6 +63,7 @@ def clean_list(line_list):
     line_list = [line for line in line_list if line != "\n" and not line.strip().startswith("#", 0)]
     line_list = [line.replace("\n", "") for line in line_list]
     return line_list
+
 
 def extract_email_input(filename):
     """
@@ -78,14 +83,16 @@ def extract_email_input(filename):
     for line in line_list:
         split_line = line.split('=', 1)
 
-        if  split_line[0] not in EMAIL_PARAMS:
-            raise Exception("Entry " + split_line[0] + " in " + filename + " is unknown! only " + EMAIL_PARAMS + " are allowed!")
+        if split_line[0] not in EMAIL_PARAMS:
+            raise Exception(
+                "Entry " + split_line[0] + " in " + filename + " is unknown! only " + EMAIL_PARAMS + " are allowed!")
         else:
             if split_line[1].strip() == "\n" or split_line[1].strip() == "":
                 raise Exception("Entry " + split_line[0] + " in " + filename + " is empty!")
             email_inputs.append(split_line[1].replace("\n", ""))
 
     return email_inputs
+
 
 def convert_listed_entries_to_list(track_list, index, separation_char):
     """
@@ -101,6 +108,7 @@ def convert_listed_entries_to_list(track_list, index, separation_char):
     """
     track_list[index] = track_list[index].split(separation_char)
     return track_list
+
 
 def extract_track_inputs(line_list):
     """
@@ -134,4 +142,4 @@ def extract_track_inputs(line_list):
     if counter % len(TRACK_PARAMS) != 0:
         raise Exception("Final track entry is incomplete!")
 
-    return list_inputs 
+    return list_inputs

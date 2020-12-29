@@ -16,22 +16,40 @@
 # target_price=10.00    - trigger if the price is equal to or less than target_price
 
 
-# Example entry to detect if webpage does not contain HTML element
+# Example entry to detect if webpage does not  contain HTML element
 title=Ryzen 5 5600X Processor, 3.7GHz w/ 6 Cores / 12 Threads
-url=https=//www.memoryexpress.com/Products/MX00114455
+url=https://www.memoryexpress.com/Products/MX00114455
 check_interval=300
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]
-title=Out of Stock
+xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
+element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
 
 # Example entry for any price decrease (Make sure the title in the html element contains the price)
-title=Dell 2721DGF
-url=https://www.dell.com/en-ca/shop/dell-27-gaming-monitor-s2721dgf/apd/210-axeh/monitors-monitor-accessories
+title=ASUS TUF
+url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181415
 check_interval=300
-xpath=/html/body/div[4]/div[1]/div/div/div[4]/div/div/article/section/div[3]/div[1]/div/div
+xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[4]/div[2]/div[1]/span/strong/text()
 element_title=CAD $739.99
 check=price_decrease
-message_header=$title decreased to $price
+message_header=price decreased
+message_body=$url
+
+title=bestbuy test
+url=https://www.bestbuy.ca/en-ca/product/lenovo-ideapad-3-15-6-touchscreen-laptop-almond-intel-core-i3-1005g1-256gb-ssd-8gb-ram-windows-10-s/14700364
+check_interval=300
+xpath=/html/body/div[1]/div/div/div[4]/div[1]/div[1]/div[1]/div[1]/span/text()
+element_title=81WE00KWCF
+check=contains
+message_header=price decreased to $price
+message_body=$url
+
+title=newegg test
+url=https://www.newegg.ca/black-asus-tuf-gaming-vg27aq-90lm0500-b013b0-27/p/N82E16824236987?Item=N82E16824236987&cm_sp=Homepage_dailydeals-_-P1_24-236-987-_-12282020
+check_interval=300
+xpath=/html/body/div[6]/div[2]/div[1]/div/div/div[1]/div[1]/div[2]/div[2]/ul/li[3]/strong/text()
+element_title=81WE00KWCF
+check=contains
+message_header=price decreased to $price
 message_body=$url
