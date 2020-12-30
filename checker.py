@@ -9,6 +9,7 @@
 import mailer
 import parse
 import re
+import datetime
 
 COMMANDS = ["contains", "not_contains", "price_decrease"]
 DATA_COMMANDS = ["contains_select", "target_price"]
@@ -78,17 +79,19 @@ class CommandProcessor:
 
         self.command = self.track_info[parse.TRACK_PARAMS.index("check")]
 
+        t = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
         if valid_command(self.command):
             if has_data(self.command):
                 command_data = extract_data(self.command)
-                print(self.command, self.data)
+                print(t, self.command, self.data)
                 result = globals()[command_data[0]](command_data[1], self.data)
                 if result:
                     mailer.send_email(email_info[0], email_info[1], email_info[2],
                                       self.message_format(self.track_info[parse.TRACK_PARAMS.index("message_header")]),
                                       self.message_format(self.track_info[parse.TRACK_PARAMS.index("message_body")]))
             else:
-                print(self.command, self.data, "expected:", self.track_info[parse.TRACK_PARAMS.index("element_title")])
+                print(t, self.command, self.data, "expected:", self.track_info[parse.TRACK_PARAMS.index("element_title")])
                 result = globals()[self.command](self.track_info[parse.TRACK_PARAMS.index("element_title")], self.data)
                 if result:
                     mailer.send_email(email_info[0], email_info[1], email_info[2],

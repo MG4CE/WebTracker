@@ -56,6 +56,7 @@ def send_email(sender_email, sender_passsword, recipient_email, message_subject,
         Boolean: true if the email was sent successfully, false otherwise.
     """
     message = build_message(sender_email, recipient_email, message_subject, message_body)
+    t = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     try:
         # Connect to the smtp mailing server
@@ -74,10 +75,10 @@ def send_email(sender_email, sender_passsword, recipient_email, message_subject,
         mailserver.login(sender_email, sender_passsword)
         mailserver.sendmail(sender_email, recipient_email, message.as_string())
         mailserver.quit()
-        print("Email Sent")
+        print(t, "Email Sent")
         return True
 
     except Exception as error:
         print(error)
-        print("Exiting application!")
+        print(t, "Exiting application!")
         return False
