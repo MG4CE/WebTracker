@@ -69,7 +69,11 @@ class CommandProcessor:
 
     def __init__(self, track_entry, result, email_info):
         self.track_info = track_entry
-        self.data = clean_data(result)
+        if result is not None:
+            self.data = clean_data(result)
+        else:
+            self.data = result
+
         self.email_info = email_info
 
         self.command = self.track_info[parse.TRACK_PARAMS.index("check")]
@@ -95,7 +99,7 @@ class CommandProcessor:
     def message_format(self, message):
         message = message.replace("$url", self.track_info[parse.TRACK_PARAMS.index("url")])
         message = message.replace("$title", self.track_info[parse.TRACK_PARAMS.index("title")])
-        if self.command.find("price") != -1:
+        if self.command.find("price") != -1 and not None:
             message = message.replace("$price", "$"+convert_price_to_float(self.data))
         return message
 

@@ -1,5 +1,6 @@
 import scrapy
 
+
 class TextSpider(scrapy.Spider):
     name = "text"
 
