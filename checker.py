@@ -64,24 +64,42 @@ def extract_data(command):
     return command.split("=")
 
 
-def process_command(track):
-    if track["result"] is None:
-        result = None
-    else:
-        result = clean_data(track["result"])
+def status_check(track, command_result):
+    if command_result and track["change_status"]:
+        track["trigger"] = False
+        return track
+    elif command_result and not track["change_status"]:
+        track["trigger"] = True
+        track["change_status"] = True
+        return track
+    elif not command_result and track["change_status"]:
+        track["trigger"] = False
+        track["change_status"] = False
+        return track
+    elif not command_result and not track["change_status"]:
+        track["trigger"] = False
+        return track
 
-    t = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+def process_command(track):
+    #t = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+    if track["result"] is not None:
+        track["result"] = clean_data(track["result"])
+
+    if "change_status" not in track:
+        track["change_status"] = False
+    
+    if "trigger" not in track:
+        track["trigger"] = False
 
     if valid_command(track["check"]):
         if has_data(track["check"]):
             command_data = extract_data(track["check"])
-            print("[" + t + "]", "\"" + track["title"] + "\"", "command:", track["check"],"expected:", command_data[0], "actual:", result)
-            command_result = globals()[command_data[0]](command_data[1], result)
-            if command_result:
-                return True
+            #print("[" + t + "]", "\"" + track["title"] + "\"", "command:", track["check"],"expected:", command_data[0], "actual:", track["result"])
+            command_result = globals()[command_data[0]](command_data[1], track["result"])
+            return status_check(track, command_result)
+
         else:
-            print("[" + t + "]", "\"" + track["title"] + "\"", "command:", track["check"],"expected:", track["element_title"], "actual:", result)
-            result = globals()[track["check"]](track["element_title"], result)
-            if result:
-                return True
-    return False
+            #print("[" + t + "]", "\"" + track["title"] + "\"", "command:", track["check"],"expected:", track["element_title"], "actual:", track["result"])
+            command_result = globals()[track["check"]](track["element_title"], track["result"])
+            return status_check(track, command_result)
