@@ -17,16 +17,14 @@
 
 title=Ryzen 5 5600X (Newegg)
 url=https://www.newegg.ca/amd-ryzen-5-5600x/p/N82E16819113666?Description=5600x&cm_re=5600x-_-19-113-666-_-Product
-check_interval=300
-xpath=/html/body/div[6]/div[2]/div[1]/div/div/div[1]/div[1]/div[1]/div/div/span/text()
-element_title=CURRENTLY SOLD OUT
+xpath=/html/body/div[6]/div[2]/div[1]/div/div/div[1]/div[1]/div[2]/div[2]/ul/li[3]/strong/text()
+element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
 
 title=ASUS TUF 3080 NON OC (Newegg)
 url=https://www.newegg.ca/asus-geforce-rtx-3080-tuf-rtx3080-10g-gaming/p/N82E16814126453?Description=rtx%203080&cm_re=rtx_3080-_-14-126-453-_-Product
-check_interval=300
 xpath=/html/body/div[6]/div[2]/div[1]/div/div/div[1]/div[1]/div[1]/div/div/span/text()
 element_title=CURRENTLY SOLD OUT
 check=not_contains
@@ -35,7 +33,6 @@ message_body=$url
 
 title=EVGA GeForce RTX 3080 FTW3 ULTRA GAMING (Newegg)
 url=https://www.newegg.ca/evga-geforce-rtx-3080-10g-p5-3897-kr/p/N82E16814487518?Description=rtx%203080&cm_re=rtx_3080-_-14-487-518-_-Product
-check_interval=300
 xpath=/html/body/div[6]/div[2]/div[1]/div/div/div[1]/div[1]/div[1]/div/div/span/text()
 element_title=CURRENTLY SOLD OUT
 check=not_contains
@@ -44,7 +41,6 @@ message_body=$url
 
 title=ASUS TUF 3080 OC (Newegg)
 url=https://www.newegg.ca/asus-geforce-rtx-3080-tuf-rtx3080-o10g-gaming/p/N82E16814126452?Description=rtx%203080&cm_re=rtx_3080-_-14-126-452-_-Product
-check_interval=300
 xpath=/html/body/div[6]/div[2]/div[1]/div/div/div[1]/div[1]/div[1]/div/div/span/text()
 element_title=CURRENTLY SOLD OUT
 check=not_contains
@@ -53,7 +49,6 @@ message_body=$url
 
 title=Ryzen 5 5600X (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=4_64_1969&item_id=183432
-check_interval=300
 xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
@@ -62,7 +57,6 @@ message_body=$url
 
 title=EVGA GeForce RTX 3080 FTW3 ULTRA (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181376
-check_interval=300
 xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[4]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
@@ -71,7 +65,6 @@ message_body=$url
 
 title=ASUS ROG Strix GeForce RTX 3080 (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181842
-check_interval=300
 xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
@@ -80,7 +73,6 @@ message_body=$url
 
 title=MSI GeForce RTX 3080 Gaming X Trio (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181348
-check_interval=300
 xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
@@ -89,7 +81,6 @@ message_body=$url
 
 title=ASUS TUF Gaming GeForce RTX 3080 OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181415
-check_interval=300
 xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[4]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
@@ -98,7 +89,6 @@ message_body=$url
 
 title=GIGABYTE AORUS GeForce RTX 3080 MASTER (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=182754
-check_interval=300
 xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[4]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
@@ -107,7 +97,6 @@ message_body=$url
 
 title=Ryzen 5 5600X (ME)
 url=https://www.memoryexpress.com/Products/MX00114455
-check_interval=300
 xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
 element_title=Out of Stock
 check=not_contains
@@ -116,7 +105,6 @@ message_body=$url
 
 title=Ryzen 5 5600X (ME:OTTAWA)
 url=https://www.memoryexpress.com/Products/MX00114455
-check_interval=300
 xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[2]/div/div/ul/li[4]/div[2]/ul/li[3]/div/span[2]/text()
 element_title=Out of Stock
 check=not_contains
@@ -125,7 +113,6 @@ message_body=$url
 
 title=TUF RTX3080 OC GAMING GeForce RTX 3080 (ME)
 url=https://www.memoryexpress.com/Products/MX00114003
-check_interval=300
 xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
 element_title=Out of Stock
 check=not_contains
@@ -134,7 +121,6 @@ message_body=$url
 
 title=TUF RTX3080 OC GAMING GeForce RTX 3080 (ME:OTTAWA)
 url=https://www.memoryexpress.com/Products/MX00114003
-check_interval=300
 xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[2]/div/div/ul/li[4]/div[2]/ul/li[3]/div/span[2]/text()
 element_title=Out of Stock
 check=not_contains
@@ -143,7 +129,6 @@ message_body=$url
 
 title=GeForce RTX 3080 Gaming X Trio (ME)
 url=https://www.memoryexpress.com/Products/MX00113957
-check_interval=300
 xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
 element_title=Out of Stock
 check=not_contains
@@ -152,7 +137,6 @@ message_body=$url
 
 title=GeForce RTX 3080 Gaming X Trio (ME:OTTAWA)
 url=https://www.memoryexpress.com/Products/MX00113957
-check_interval=300
 xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[2]/div/div/ul/li[4]/div[2]/ul/li[3]/div/span[2]/text()
 element_title=Out of Stock
 check=not_contains
@@ -161,7 +145,6 @@ message_body=$url
 
 title=GeForce RTX 3080 FTW3 ULTRA GAMING (ME)
 url=https://www.memoryexpress.com/Products/MX00113957
-check_interval=300
 xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
 element_title=Out of Stock
 check=not_contains
@@ -170,7 +153,6 @@ message_body=$url
 
 title=GeForce RTX 3080 FTW3 ULTRA GAMING (ME:OTTAWA)
 url=https://www.memoryexpress.com/Products/MX00113957
-check_interval=300
 xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[2]/div/div/ul/li[4]/div[2]/ul/li[3]/div/span[2]/text()
 element_title=Out of Stock
 check=not_contains
@@ -179,7 +161,6 @@ message_body=$url
 
 title=ROG STRIX RTX3080 OC (ME)
 url=https://www.memoryexpress.com/Products/MX00114092
-check_interval=300
 xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
 element_title=Out of Stock
 check=not_contains
@@ -188,7 +169,6 @@ message_body=$url
 
 title=ROG STRIX RTX3080 OC (ME:OTTAWA)
 url=https://www.memoryexpress.com/Products/MX00114092
-check_interval=300
 xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[2]/div/div/ul/li[4]/div[2]/ul/li[3]/div/span[2]/text()
 element_title=Out of Stock
 check=not_contains
@@ -197,7 +177,6 @@ message_body=$url
 
 title=AORUS MASTER GeForce RTX 3080 (ME)
 url=https://www.memoryexpress.com/Products/MX00114312
-check_interval=300
 xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
 element_title=Out of Stock
 check=not_contains
@@ -206,14 +185,16 @@ message_body=$url
 
 title=AORUS MASTER GeForce RTX 3080  (ME:OTTAWA)
 url=https://www.memoryexpress.com/Products/MX00114312
-check_interval=300
 xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[2]/div/div/ul/li[4]/div[2]/ul/li[3]/div/span[2]/text()
 element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
 
-
-
-
-
+title=Best Buy Test
+url=https://www.bestbuy.ca/en-ca/product/nvidia-geforce-rtx-3060-ti-8gb-gddr6-video-card/15166285
+xpath=/html/body/div[1]/div/div/div[4]/div[1]/div[2]/div[2]/div[5]/div/div[1]/div/p/span/text()
+element_title=Out of Stock
+check=not_contains
+message_header=$title back in stock
+message_body=$url

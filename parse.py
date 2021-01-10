@@ -6,10 +6,13 @@
 # - Extract relevant information required to run the application i.e. tracking entries and emails. 
 
 # TODO: 
-# - log instead of printing errors and results
+# - add logging
+# - add error checking
+# - update docstrings
+# - Wrap in a class to improve usability 
 
-EMAIL_PARAMS = ["sender_email", "sender_email_password", "recipient_email"]
-TRACK_PARAMS = ["title", "url", "check_interval", "xpath", "element_title", "check", "message_header", "message_body"]
+CONFIG_PARAMS = ["sender_email", "sender_email_password", "recipient_email", "timeout"]
+TRACK_PARAMS = ["title", "url", "xpath", "element_title", "check", "message_header", "message_body"]
 TRACK_PARAMS_TYPE_LIST = []
 
 
@@ -65,7 +68,7 @@ def clean_list(line_list):
     return line_list
 
 
-def extract_email_input(filename):
+def extract_config_input(filename):
     """
     Extracts the expected email parameter from a file into a list. 
 
@@ -78,18 +81,18 @@ def extract_email_input(filename):
     file = read_file(filename)
     line_list = convert_file_to_list(file)
 
-    email_inputs = []
+    email_inputs = {}
 
     for line in line_list:
         split_line = line.split('=', 1)
 
-        if split_line[0] not in EMAIL_PARAMS:
+        if split_line[0] not in CONFIG_PARAMS:
             raise Exception(
-                "Entry " + split_line[0] + " in " + filename + " is unknown! only " + EMAIL_PARAMS + " are allowed!")
+                "Entry " + split_line[0] + " in " + filename + " is unknown! only " + str(CONFIG_PARAMS) + " are allowed!")
         else:
             if split_line[1].strip() == "\n" or split_line[1].strip() == "":
                 raise Exception("Entry " + split_line[0] + " in " + filename + " is empty!")
-            email_inputs.append(split_line[1].replace("\n", ""))
+            email_inputs[split_line[0]] = split_line[1].replace("\n", "")
 
     return email_inputs
 
@@ -122,20 +125,20 @@ def extract_track_inputs(line_list):
         List: each tracking entry as list
     """
     list_inputs = []
-    track_entry = []
+    track_entry = {}
     counter = 0
 
     for line in line_list:
         entry = line.split('=', 1)
         if entry[0] == TRACK_PARAMS[counter % len(TRACK_PARAMS)]:
-            track_entry.append(entry[1])
+            track_entry[entry[0]] = entry[1]
             counter = counter + 1
             if counter % len(TRACK_PARAMS) == 0:
                 for select in TRACK_PARAMS_TYPE_LIST:
                     select = select.split(":")
                     track_entry = convert_listed_entries_to_list(track_entry, TRACK_PARAMS.index(select[0]), select[1])
                 list_inputs.append(track_entry)
-                track_entry = []
+                track_entry = {}
         else:
             raise Exception("Unexpected track entry, make sure track entries follow template!")
 
@@ -143,3 +146,9 @@ def extract_track_inputs(line_list):
         raise Exception("Final track entry is incomplete!")
 
     return list_inputs
+
+
+def message_format(track, message):
+    message = message.replace("$url", track["url"])
+    message = message.replace("$title", track["title"])
+    return message

@@ -6,8 +6,6 @@
 # price_decrease        - trigger if the price detected in the HTML element decreases or changes
 # target_price=10.00    - trigger if the price is equal to or less than target_price
 
-import mailer
-import parse
 import re
 import datetime
 
@@ -66,43 +64,24 @@ def extract_data(command):
     return command.split("=")
 
 
-class CommandProcessor:
+def process_command(track):
+    if track["result"] is None:
+        result = None
+    else:
+        result = clean_data(track["result"])
 
-    def __init__(self, track_entry, result, email_info):
-        self.track_info = track_entry
-        if result is not None:
-            self.data = clean_data(result)
+    t = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+    if valid_command(track["check"]):
+        if has_data(track["check"]):
+            command_data = extract_data(track["check"])
+            print("[" + t + "]", "\"" + track["title"] + "\"", "command:", track["check"],"expected:", command_data[0], "actual:", result)
+            command_result = globals()[command_data[0]](command_data[1], result)
+            if command_result:
+                return True
         else:
-            self.data = result
-
-        self.email_info = email_info
-
-        self.command = self.track_info[parse.TRACK_PARAMS.index("check")]
-
-        t = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-
-        if valid_command(self.command):
-            if has_data(self.command):
-                command_data = extract_data(self.command)
-                print(t, self.command, self.data)
-                result = globals()[command_data[0]](command_data[1], self.data)
-                if result:
-                    mailer.send_email(email_info[0], email_info[1], email_info[2],
-                                      self.message_format(self.track_info[parse.TRACK_PARAMS.index("message_header")]),
-                                      self.message_format(self.track_info[parse.TRACK_PARAMS.index("message_body")]))
-            else:
-                print(t, self.command, self.data, "expected:", self.track_info[parse.TRACK_PARAMS.index("element_title")])
-                result = globals()[self.command](self.track_info[parse.TRACK_PARAMS.index("element_title")], self.data)
-                if result:
-                    mailer.send_email(email_info[0], email_info[1], email_info[2],
-                                      self.message_format(self.track_info[parse.TRACK_PARAMS.index("message_header")]),
-                                      self.message_format(self.track_info[parse.TRACK_PARAMS.index("message_body")]))
-
-
-    def message_format(self, message):
-        message = message.replace("$url", self.track_info[parse.TRACK_PARAMS.index("url")])
-        message = message.replace("$title", self.track_info[parse.TRACK_PARAMS.index("title")])
-        if self.command.find("price") != -1 and not None:
-            message = message.replace("$price", "$"+convert_price_to_float(self.data))
-        return message
-
+            print("[" + t + "]", "\"" + track["title"] + "\"", "command:", track["check"],"expected:", track["element_title"], "actual:", result)
+            result = globals()[track["check"]](track["element_title"], result)
+            if result:
+                return True
+    return False

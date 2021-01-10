@@ -3,7 +3,8 @@
 # email properly or email yourself.
 
 # TODO: 
-# - log instead of printing errors and results
+# - add logging
+# - Wrap in a Class
 
 import smtplib
 from email.mime.multipart import MIMEMultipart
@@ -75,10 +76,9 @@ def send_email(sender_email, sender_passsword, recipient_email, message_subject,
         mailserver.login(sender_email, sender_passsword)
         mailserver.sendmail(sender_email, recipient_email, message.as_string())
         mailserver.quit()
-        print(t, "Email Sent")
+        print("[" + t + "]", "Email Sent!")
         return True
 
     except Exception as error:
-        print(error)
-        print(t, "Exiting application!")
+        print("[" + t + "]", error)
         return False

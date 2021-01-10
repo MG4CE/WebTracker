@@ -12,7 +12,6 @@ BOT_NAME = 'webtracker'
 SPIDER_MODULES = ['webtracker.spiders']
 NEWSPIDER_MODULE = 'webtracker.spiders'
 
-
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1'
 
@@ -87,6 +86,19 @@ COOKIES_ENABLED = False
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-EXTENSIONS = {
-   'scrapy.telnet.TelnetConsole': None
-}
+#Splash Settings
+SPLASH_URL = 'http://localhost:8050'
+
+DOWNLOADER_MIDDLEWARES = {
+            'scrapy_splash.SplashCookiesMiddleware': 723,
+                'scrapy_splash.SplashMiddleware': 725,
+                    'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
+                    }
+
+SPIDER_MIDDLEWARES = {
+            'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
+            }
+
+DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
+
+HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
