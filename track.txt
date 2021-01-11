@@ -224,13 +224,13 @@ message_body=$url
 #message_header=$title back in stock
 #message_body=$url
 
-title=EVGA GeForce RTX 3080 FTW3 GAMING (EVGA)
-url=https://www.evga.com/products/productlist.aspx?type=0&family=GeForce+30+Series+Family&chipset=RTX+3080
-xpath=/html/body/form/div[3]/div/div/div[3]/div[5]/div/div[5]/div[2]/div[1]/div/span[1]/text()
-element_title=Out of Stock
-check=not_contains
-message_header=$title back in stock
-message_body=$url
+#title=EVGA GeForce RTX 3080 FTW3 GAMING (EVGA)
+#url=https://www.evga.com/products/productlist.aspx?type=0&family=GeForce+30+Series+Family&chipset=RTX+3080
+#xpath=/html/body/form/div[3]/div/div/div[3]/div[5]/div/div[5]/div[2]/div[1]/div/span[1]/text()
+#element_title=Out of Stock
+#check=not_contains
+#message_header=$title back in stock
+#message_body=$url
 
 #title=EVGA GeForce RTX 3080 FTW3 ULTRA GAMING (EVGA)
 #url=https://www.evga.com/products/product.aspx?pn=10G-P5-3897-KR

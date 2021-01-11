@@ -97,7 +97,6 @@ def process_command(track):
         return track
     else:
         track["redirect"] = False
-        return track
 
     if valid_command(track["check"]):
         if has_data(track["check"]):
