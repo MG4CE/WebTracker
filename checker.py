@@ -92,6 +92,13 @@ def process_command(track):
     if "trigger" not in track:
         track["trigger"] = False
 
+    if track["response_url"] != track["url"]:
+        track["redirect"] = True
+        return track
+    else:
+        track["redirect"] = False
+        return track
+
     if valid_command(track["check"]):
         if has_data(track["check"]):
             command_data = extract_data(track["check"])

@@ -64,6 +64,14 @@ check=not_contains
 message_header=$title back in stock
 message_body=$url
 
+title=MSI GeForce RTX 3080 GAMING X TRIO (Newegg)
+url=https://www.newegg.ca/msi-geforce-rtx-3080-rtx-3080-gaming-x-trio-10g/p/N82E16814137597
+xpath=/html/body/div[6]/div[2]/div[1]/div/div/div[1]/div[1]/div[1]/div/div/span/text()
+element_title=OUT OF STOCK
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+
 title=ASUS ROG Strix NVIDIA GeForce RTX 3080 (BestBuy)
 url=https://www.bestbuy.ca/en-ca/product/asus-rog-strix-nvidia-geforce-rtx-3080-10gb-gddr6x-video-card/14954116
 xpath=/html/body/div[1]/div/div/div[4]/div[1]/div[2]/div[2]/div[5]/div/div[1]/div/p/span/text()
@@ -82,7 +90,7 @@ message_body=$url
 
 title=EVGA GeForce RTX 3080 FTW3 ULTRA (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181376
-xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[4]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[4]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -90,7 +98,7 @@ message_body=$url
 
 title=ASUS ROG Strix GeForce RTX 3080 (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181842
-xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -98,7 +106,7 @@ message_body=$url
 
 title=ASUS TUF Gaming GeForce RTX 3080 OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181415
-xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[4]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[4]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -106,7 +114,7 @@ message_body=$url
 
 title=GIGABYTE AORUS GeForce RTX 3080 MASTER (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=182754
-xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[4]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[4]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -114,7 +122,7 @@ message_body=$url
 
 title=GIGABYTE GeForce RTX 3080 VISION OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=182755
-xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -122,7 +130,7 @@ message_body=$url
 
 title=GIGABYTE GeForce RTX 3080 GAMING OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181353
-xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -130,7 +138,15 @@ message_body=$url
 
 title=Gigabyte AORUS GeForce RTX 3080 XTREME (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183098
-xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[4]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[4]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+element_title=-
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+
+title=MSI GeForce RTX 3080 Gaming X Trio (CC)
+url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181348&language=en
+xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -200,6 +216,39 @@ check=not_contains
 message_header=$title back in stock
 message_body=$url
 
+#title=GeForce RTX 3080 Gaming X Trio (ME)
+#url=https://www.memoryexpress.com/Products/MX00113957
+#xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
+#element_title=Out of Stock
+#check=not_contains
+#message_header=$title back in stock
+#message_body=$url
+
+title=EVGA GeForce RTX 3080 FTW3 GAMING (EVGA)
+url=https://www.evga.com/products/productlist.aspx?type=0&family=GeForce+30+Series+Family&chipset=RTX+3080
+xpath=/html/body/form/div[3]/div/div/div[3]/div[5]/div/div[5]/div[2]/div[1]/div/span[1]/text()
+element_title=Out of Stock
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+
+#title=EVGA GeForce RTX 3080 FTW3 ULTRA GAMING (EVGA)
+#url=https://www.evga.com/products/product.aspx?pn=10G-P5-3897-KR
+#xpath=/html/body/form/div[3]/div/div/div[3]/div[4]/div[1]/div[2]/div[1]/p/text()
+#element_title=Out of Stock
+#check=not_contains
+#message_header=$title back in stock
+#message_body=$url
+
+# 6800 XT
+#title=AMD Radeon™ RX 6800 XT Graphics (AMD)
+#url=https://www.amd.com/en/direct-buy/5458372800/ca
+#xpath=/html/body/div[1]/main/div/div/div/div[1]/div[2]/div/div[2]/p/text()
+#element_title=Out of Stock
+#check=not_contains
+#message_header=$title back in stock
+#message_body=$url
+
 # RTX 3070
 title=ASUS TUF Gaming GeForce RTX 3070 (Newegg)
 url=https://www.newegg.ca/asus-geforce-rtx-3070-tuf-rtx3070-o8g-gaming/p/N82E16814126461?Description=3070&cm_re=3070-_-14-126-461-_-Product
@@ -219,7 +268,7 @@ message_body=$url
 
 title=ASUS TUF Gaming GeForce RTX 3070 OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183638
-xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -227,7 +276,7 @@ message_body=$url
 
 title=GIGABYTE GeForce RTX 3070 GAMING OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183099
-xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -265,10 +314,34 @@ check=not_contains
 message_header=$title back in stock
 message_body=$url
 
+#title=EVGA GeForce RTX 3070 XC3 ULTRA GAMING (EVGA)
+#url=https://www.evga.com/products/product.aspx?pn=08G-P5-3755-KR
+#xpath=/html/body/form/div[3]/div/div/div[3]/div[4]/div[1]/div[2]/div[1]/p/text()
+#element_title=Out of Stock
+#check=not_contains
+#message_header=$title back in stock
+#message_body=$url
+
+#title=EVGA GeForce RTX 3070 XC3 GAMING (EVGA)
+#url=https://www.evga.com/products/product.aspx?pn=08G-P5-3753-KR
+#xpath=/html/body/form/div[3]/div/div/div[3]/div[4]/div[1]/div[2]/div[1]/p/text()
+#element_title=Out of Stock
+#check=not_contains
+#message_header=$title back in stock
+#message_body=$url
+
+#title=EVGA GeForce RTX 3070 FTW3 ULTRA GAMING (EVGA)
+#url=https://www.evga.com/products/product.aspx?pn=08G-P5-3767-KR
+#xpath=/html/body/form/div[3]/div/div/div[3]/div[4]/div[1]/div[2]/div[1]/p/text()
+#element_title=Out of Stock
+#check=not_contains
+#message_header=$title back in stock
+#message_body=$url
+
 # Motherboard
 title=GIGABYTE B550i (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=26_1832_1833&item_id=169756
-xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -276,7 +349,7 @@ message_body=$url
 
 title=GIGABYTE B550i (CC:OTTAWA)
 url=https://www.canadacomputers.com/product_info.php?cPath=26_1832_1833&item_id=169756
-xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[3]/div[19]/div/div[2]/div/p/span/strong/text()
+xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -325,7 +398,7 @@ message_body=$url
 
 title=CORSAIR SF750 80 Plus Platinum (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=441&item_id=134743
-xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -333,7 +406,7 @@ message_body=$url
 
 title=CORSAIR SF750 80 Plus Platinum (CC:OTTAWA)
 url=https://www.canadacomputers.com/product_info.php?cPath=441&item_id=134743
-xpath=/html/body/div[3]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[3]/div[19]/div/div[2]/div/p/span/strong/text()
+xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
 element_title=-
 check=not_contains
 message_header=$title back in stock

@@ -13,7 +13,7 @@ CONFIG_FILE = "config.cfg"
 TRACKING_FILE = "track.txt"
 
 class WebTracker():
-    
+
     def __init__(self):
         logging.getLogger('scrapy').propagate = False
 
@@ -33,9 +33,11 @@ class WebTracker():
             track = checker.process_command(data[0])
             t = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             print("[" + t + "]", "\"" + track["title"] + "\"", "command:", track["check"],"expected:", track["element_title"], "actual:", track["result"])
-            if track["trigger"]:
+            if track["redirect"]:
+                print("[" + t + "]", "\"" + track["title"] + "\"", "respone URL is not equal to request!")
+            elif track["trigger"]:
                 mailer.send_email(self.config_info["sender_email"], self.config_info["sender_email_password"], self.config_info["recipient_email"], 
-                parse.message_format(track, track["message_header"]), parse.message_format(track, track["message_body"]))        
+                parse.message_format(track, track["message_header"]), parse.message_format(track, track["message_body"]))      
             time.sleep(int(self.config_info["timeout"]))
 
 
@@ -56,7 +58,9 @@ class WebTracker():
                 track = checker.process_command(track)
                 t = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                 print("[" + t + "]", "\"" + track["title"] + "\"", "command:", track["check"],"expected:", track["element_title"], "actual:", track["result"])
-                if track["trigger"]:
+                if track["redirect"]:
+                    print("[" + t + "]", "\"" + track["title"] + "\"", "respone URL is not equal to request!")
+                elif track["trigger"]:
                     mailer.send_email(self.config_info["sender_email"], self.config_info["sender_email_password"], self.config_info["recipient_email"], 
                     parse.message_format(track, track["message_header"]), parse.message_format(track, track["message_body"]))
             job = Job(HTMLSpider, tracks=tracks)
