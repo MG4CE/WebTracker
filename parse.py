@@ -12,7 +12,7 @@
 # - Wrap in a class to improve usability 
 
 CONFIG_PARAMS = ["sender_email", "sender_email_password", "recipient_email", "timeout"]
-TRACK_PARAMS = ["title", "url", "xpath", "element_title", "check", "message_header", "message_body"]
+TRACK_PARAMS = ["title", "url", "selector", "element_title", "check", "message_header", "message_body"]
 TRACK_PARAMS_TYPE_LIST = []
 
 

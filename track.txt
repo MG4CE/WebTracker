@@ -2,7 +2,7 @@
 # title=                <--- title of tracker
 # url=                  <--- webpage url
 # check_interval=       <--- time between webpage checks in seconds
-# xpath=           	    <--- xpath location of element to check
+# selector=           	<--- selector location of element to check
 # element_title=        <--- title in the element to check 
 # check=                <--- selected check command
 # message_header=       <--- email header
@@ -18,79 +18,79 @@
 # RTX 3080
 title=ASUS TUF Gaming GeForce RTX 3080 (Newegg)
 url=https://www.newegg.ca/asus-geforce-rtx-3080-tuf-rtx3080-o10g-gaming/p/N82E16814126452?Description=3080&cm_re=3080-_-14-126-452-_-Product
-xpath=/html/body/div[6]/div[2]/div[1]/div/div/div[1]/div[1]/div[1]/div/div/span/text()
-element_title=OUT OF STOCK
+selector=#app > div.page-content > div.page-section > div > div > div.row-body > div.product-main.display-flex > div.product-wrap > div.product-info-group > div.product-inventory > strong
+element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
 
 title=ASUS TUF Gaming NVIDIA GeForce RTX 3080 (Newegg)
 url=https://www.newegg.ca/asus-geforce-rtx-3080-tuf-rtx3080-10g-gaming/p/N82E16814126453?Description=3080&cm_re=3080-_-14-126-453-_-Product
-xpath=/html/body/div[6]/div[2]/div[1]/div/div/div[1]/div[1]/div[1]/div/div/span/text()
-element_title=OUT OF STOCK
+selector=#app > div.page-content > div.page-section > div > div > div.row-body > div.product-main.display-flex > div.product-wrap > div.product-info-group > div.product-inventory > strong
+element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
 
 title=EVGA GeForce RTX 3080 FTW3 (Newegg)
 url=https://www.newegg.ca/evga-geforce-rtx-3080-10g-p5-3895-kr/p/N82E16814487519?Description=3080&cm_re=3080-_-14-487-519-_-Product
-xpath=/html/body/div[6]/div[2]/div[1]/div/div/div[1]/div[1]/div[1]/div/div/span/text()
-element_title=OUT OF STOCK
+selector=#app > div.page-content > div.page-section > div > div > div.row-body > div.product-main.display-flex > div.product-wrap > div.product-info-group > div.product-inventory > strong
+element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
 
 title=ASUS ROG Strix GeForce RTX 3080 (Newegg)
 url=https://www.newegg.ca/asus-geforce-rtx-3080-rog-strix-rtx3080-o10g-gaming/p/N82E16814126457?Description=3080&cm_re=3080-_-14-126-457-_-Product
-xpath=/html/body/div[6]/div[2]/div[1]/div/div/div[1]/div[1]/div[1]/div/div/span/text()
-element_title=OUT OF STOCK
+selector=#app > div.page-content > div.page-section > div > div > div.row-body > div.product-main.display-flex > div.product-wrap > div.product-info-group > div.product-inventory > strong
+element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
 
 title=GIGABYTE AORUS GeForce RTX 3080 (Newegg)
 url=https://www.newegg.ca/gigabyte-geforce-rtx-3080-gv-n3080aorus-m-10gd/p/N82E16814932336?Description=rtx%203080&cm_re=rtx_3080-_-14-932-336-_-Product
-xpath=/html/body/div[6]/div[2]/div[1]/div/div/div[1]/div[1]/div[1]/div/div/span/text()
-element_title=OUT OF STOCK
+selector=#app > div.page-content > div.page-section > div > div > div.row-body > div.product-main.display-flex > div.product-wrap > div.product-info-group > div.product-inventory > strong
+element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
 
 title=GIGABYTE AORUS GeForce RTX 3080 (Newegg)
 url=https://www.newegg.ca/gigabyte-geforce-rtx-3080-gv-n3080aorus-m-10gd/p/N82E16814932336?Description=rtx%203080&cm_re=rtx_3080-_-14-932-336-_-Product
-xpath=/html/body/div[6]/div[2]/div[1]/div/div/div[1]/div[1]/div[1]/div/div/span/text()
-element_title=OUT OF STOCK
+selector=#app > div.page-content > div.page-section > div > div > div.row-body > div.product-main.display-flex > div.product-wrap > div.product-info-group > div.product-inventory > strong
+element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
 
 title=MSI GeForce RTX 3080 GAMING X TRIO (Newegg)
 url=https://www.newegg.ca/msi-geforce-rtx-3080-rtx-3080-gaming-x-trio-10g/p/N82E16814137597
-xpath=/html/body/div[6]/div[2]/div[1]/div/div/div[1]/div[1]/div[1]/div/div/span/text()
-element_title=OUT OF STOCK
+selector=#app > div.page-content > div.page-section > div > div > div.row-body > div.product-main.display-flex > div.product-wrap > div.product-info-group > div.product-inventory > strong
+element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
 
 title=ASUS ROG Strix NVIDIA GeForce RTX 3080 (BestBuy)
 url=https://www.bestbuy.ca/en-ca/product/asus-rog-strix-nvidia-geforce-rtx-3080-10gb-gddr6x-video-card/14954116
-xpath=/html/body/div[1]/div/div/div[4]/div[1]/div[2]/div[2]/div[5]/div/div[1]/div/p/span/text()
-element_title=Sold out online
+selector=#root > div > div.x-page-content.container_3Sp8P > div.x-product-detail-page > div.row_1Rbqw > div.col-xs-12_1GBy8.col-sm-6_9CRts.col-md-4_2WnBH.collapseColContainer_2eCPT > div:nth-child(5) > div > div.x-pdp-availability-online.onlineAvailabilityContainer_1F3kv > div > p > span
+element_title=Coming soon
 check=not_contains
 message_header=$title back in stock
 message_body=$url
 
 title=ASUS TUF Gaming NVIDIA GeForce RTX 3080 (BestBuy)
 url=https://www.bestbuy.ca/en-ca/product/asus-tuf-gaming-nvidia-geforce-rtx-3080-10gb-gddr6x-video-card/14953248
-xpath=/html/body/div[1]/div/div/div[4]/div[1]/div[2]/div[2]/div[5]/div/div[1]/div/p/span/text()
-element_title=Sold out online
+selector=#root > div > div.x-page-content.container_3Sp8P > div.x-product-detail-page > div.row_1Rbqw > div.col-xs-12_1GBy8.col-sm-6_9CRts.col-md-4_2WnBH.collapseColContainer_2eCPT > div:nth-child(5) > div > div.x-pdp-availability-online.onlineAvailabilityContainer_1F3kv > div > p > span
+element_title=Coming soon
 check=not_contains
 message_header=$title back in stock
 message_body=$url
 
 title=EVGA GeForce RTX 3080 FTW3 ULTRA (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181376
-xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[4]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(2) > div:nth-child(1) > div > div.col-3.justify-content-end > div > p > span > strong
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -98,7 +98,7 @@ message_body=$url
 
 title=ASUS ROG Strix GeForce RTX 3080 (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181842
-xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(2) > div:nth-child(1) > div > div.col-3.justify-content-end > div > p > span > strong
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -106,7 +106,7 @@ message_body=$url
 
 title=ASUS TUF Gaming GeForce RTX 3080 OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181415
-xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[4]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(2) > div:nth-child(1) > div > div.col-3.justify-content-end > div > p > span > strong
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -114,7 +114,7 @@ message_body=$url
 
 title=GIGABYTE AORUS GeForce RTX 3080 MASTER (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=182754
-xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[4]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(2) > div:nth-child(1) > div > div.col-3.justify-content-end > div > p > span > strong
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -122,7 +122,7 @@ message_body=$url
 
 title=GIGABYTE GeForce RTX 3080 VISION OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=182755
-xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(2) > div:nth-child(1) > div > div.col-3.justify-content-end > div > p > span > strong
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -130,7 +130,7 @@ message_body=$url
 
 title=GIGABYTE GeForce RTX 3080 GAMING OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181353
-xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(2) > div:nth-child(1) > div > div.col-3.justify-content-end > div > p > span > strong
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -138,7 +138,7 @@ message_body=$url
 
 title=Gigabyte AORUS GeForce RTX 3080 XTREME (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183098
-xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[4]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(2) > div:nth-child(1) > div > div.col-3.justify-content-end > div > p > span > strong
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -146,7 +146,7 @@ message_body=$url
 
 title=MSI GeForce RTX 3080 Gaming X Trio (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181348&language=en
-xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[4]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(2) > div:nth-child(1) > div > div.col-3.justify-content-end > div > p > span > strong
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -154,7 +154,7 @@ message_body=$url
 
 title=TUF RTX 3080 OC GAMING GeForce RTX 3080 (ME)
 url=https://www.memoryexpress.com/Products/MX00114003
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__details > div.c-capr-inventory-selector__details-online > div.c-capr-inventory-store > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
 element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
@@ -162,7 +162,7 @@ message_body=$url
 
 title=GeForce RTX 3080 FTW3 ULTRA GAMING (ME)
 url=https://www.memoryexpress.com/Products/MX00113957
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__details > div.c-capr-inventory-selector__details-online > div.c-capr-inventory-store > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
 element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
@@ -170,7 +170,7 @@ message_body=$url
 
 title=ROG STRIX RTX3080 OC (ME)
 url=https://www.memoryexpress.com/Products/MX00114092
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__details > div.c-capr-inventory-selector__details-online > div.c-capr-inventory-store > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
 element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
@@ -178,7 +178,7 @@ message_body=$url
 
 title=AORUS MASTER GeForce RTX 3080 (ME)
 url=https://www.memoryexpress.com/Products/MX00114312
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__details > div.c-capr-inventory-selector__details-online > div.c-capr-inventory-store > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
 element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
@@ -186,7 +186,7 @@ message_body=$url
 
 title=GeForce RTX 3080 Gaming OC (ME)
 url=https://www.memoryexpress.com/Products/MX00113954
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__details > div.c-capr-inventory-selector__details-online > div.c-capr-inventory-store > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
 element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
@@ -194,7 +194,7 @@ message_body=$url
 
 title=AORUS XTREME GeForce RTX 3080 (ME)
 url=https://www.memoryexpress.com/Products/MX00114404
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__details > div.c-capr-inventory-selector__details-online > div.c-capr-inventory-store > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
 element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
@@ -202,7 +202,7 @@ message_body=$url
 
 title=GeForce RTX 3080 FTW3 ULTRA GAMING (ME)
 url=https://www.memoryexpress.com/Products/MX00114024
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__details > div.c-capr-inventory-selector__details-online > div.c-capr-inventory-store > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
 element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
@@ -210,23 +210,23 @@ message_body=$url
 
 title=GeForce RTX 3080 VISION OC (ME)
 url=https://www.memoryexpress.com/Products/MX00114313
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__details > div.c-capr-inventory-selector__details-online > div.c-capr-inventory-store > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
 element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
 
-#title=GeForce RTX 3080 Gaming X Trio (ME)
-#url=https://www.memoryexpress.com/Products/MX00113957
-#xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
-#element_title=Out of Stock
-#check=not_contains
-#message_header=$title back in stock
-#message_body=$url
+title=GeForce RTX 3080 Gaming X Trio (ME)
+url=https://www.memoryexpress.com/Products/MX00113957
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__details > div.c-capr-inventory-selector__details-online > div.c-capr-inventory-store > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
+element_title=Out of Stock
+check=not_contains
+message_header=$title back in stock
+message_body=$url
 
 #title=EVGA GeForce RTX 3080 FTW3 GAMING (EVGA)
 #url=https://www.evga.com/products/productlist.aspx?type=0&family=GeForce+30+Series+Family&chipset=RTX+3080
-#xpath=/html/body/form/div[3]/div/div/div[3]/div[5]/div/div[5]/div[2]/div[1]/div/span[1]/text()
+#selector=/html/body/form/div[3]/div/div/div[3]/div[5]/div/div[5]/div[2]/div[1]/div/span[1]/text()
 #element_title=Out of Stock
 #check=not_contains
 #message_header=$title back in stock
@@ -234,16 +234,7 @@ message_body=$url
 
 #title=EVGA GeForce RTX 3080 FTW3 ULTRA GAMING (EVGA)
 #url=https://www.evga.com/products/product.aspx?pn=10G-P5-3897-KR
-#xpath=/html/body/form/div[3]/div/div/div[3]/div[4]/div[1]/div[2]/div[1]/p/text()
-#element_title=Out of Stock
-#check=not_contains
-#message_header=$title back in stock
-#message_body=$url
-
-# 6800 XT
-#title=AMD Radeon™ RX 6800 XT Graphics (AMD)
-#url=https://www.amd.com/en/direct-buy/5458372800/ca
-#xpath=/html/body/div[1]/main/div/div/div/div[1]/div[2]/div/div[2]/p/text()
+#selector=/html/body/form/div[3]/div/div/div[3]/div[4]/div[1]/div[2]/div[1]/p/text()
 #element_title=Out of Stock
 #check=not_contains
 #message_header=$title back in stock
@@ -252,15 +243,15 @@ message_body=$url
 # RTX 3070
 title=ASUS TUF Gaming GeForce RTX 3070 (Newegg)
 url=https://www.newegg.ca/asus-geforce-rtx-3070-tuf-rtx3070-o8g-gaming/p/N82E16814126461?Description=3070&cm_re=3070-_-14-126-461-_-Product
-xpath=/html/body/div[6]/div[2]/div[1]/div/div/div[1]/div[1]/div[1]/div/div/span/text()
-element_title=OUT OF STOCK
+selector=#app > div.page-content > div.page-section > div > div > div.row-body > div.product-main.display-flex > div.product-wrap > div.product-info-group > div.product-inventory > strong
+element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
 
 title=NVIDIA GeForce RTX 3070 (BestBuy)
 url=https://www.bestbuy.ca/en-ca/product/nvidia-geforce-rtx-3070-8gb-gddr6-video-card-only-at-best-buy/15078017
-xpath=/html/body/div[1]/div/div/div[4]/div[1]/div[2]/div[2]/div[4]/div/div[1]/div/p/span/text()
+selector=#root > div > div.x-page-content.container_3Sp8P > div.x-product-detail-page > div.row_1Rbqw > div.col-xs-12_1GBy8.col-sm-6_9CRts.col-md-4_2WnBH.collapseColContainer_2eCPT > div:nth-child(5) > div > div.x-pdp-availability-online.onlineAvailabilityContainer_1F3kv > div > p > span
 element_title=Coming soon
 check=not_contains
 message_header=$title back in stock
@@ -268,7 +259,7 @@ message_body=$url
 
 title=ASUS TUF Gaming GeForce RTX 3070 OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183638
-xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(2) > div:nth-child(1) > div > div.col-3.justify-content-end > div > p > span > strong
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -276,7 +267,7 @@ message_body=$url
 
 title=GIGABYTE GeForce RTX 3070 GAMING OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183099
-xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(2) > div:nth-child(1) > div > div.col-3.justify-content-end > div > p > span > strong
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -284,7 +275,7 @@ message_body=$url
 
 title=AORUS GeForce RTX 3070 Master (ME)
 url=https://www.memoryexpress.com/Products/MX00114688
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__details > div.c-capr-inventory-selector__details-online > div.c-capr-inventory-store > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
 element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
@@ -292,7 +283,7 @@ message_body=$url
 
 title=GeForce RTX 3070 GAMING OC (ME)
 url=https://www.memoryexpress.com/Products/MX00114405
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__details > div.c-capr-inventory-selector__details-online > div.c-capr-inventory-store > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
 element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
@@ -300,7 +291,7 @@ message_body=$url
 
 title=GeForce RTX 3070 Vision OC (ME)
 url=https://www.memoryexpress.com/Products/MX00114689
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__details > div.c-capr-inventory-selector__details-online > div.c-capr-inventory-store > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
 element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
@@ -308,7 +299,7 @@ message_body=$url
 
 title=TUF RTX 3070 OC (ME)
 url=https://www.memoryexpress.com/Products/MX00114567
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[6]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__details > div.c-capr-inventory-selector__details-online > div.c-capr-inventory-store > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
 element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
@@ -316,7 +307,7 @@ message_body=$url
 
 #title=EVGA GeForce RTX 3070 XC3 ULTRA GAMING (EVGA)
 #url=https://www.evga.com/products/product.aspx?pn=08G-P5-3755-KR
-#xpath=/html/body/form/div[3]/div/div/div[3]/div[4]/div[1]/div[2]/div[1]/p/text()
+#selector=/html/body/form/div[3]/div/div/div[3]/div[4]/div[1]/div[2]/div[1]/p/text()
 #element_title=Out of Stock
 #check=not_contains
 #message_header=$title back in stock
@@ -324,7 +315,7 @@ message_body=$url
 
 #title=EVGA GeForce RTX 3070 XC3 GAMING (EVGA)
 #url=https://www.evga.com/products/product.aspx?pn=08G-P5-3753-KR
-#xpath=/html/body/form/div[3]/div/div/div[3]/div[4]/div[1]/div[2]/div[1]/p/text()
+#selector=/html/body/form/div[3]/div/div/div[3]/div[4]/div[1]/div[2]/div[1]/p/text()
 #element_title=Out of Stock
 #check=not_contains
 #message_header=$title back in stock
@@ -332,57 +323,16 @@ message_body=$url
 
 #title=EVGA GeForce RTX 3070 FTW3 ULTRA GAMING (EVGA)
 #url=https://www.evga.com/products/product.aspx?pn=08G-P5-3767-KR
-#xpath=/html/body/form/div[3]/div/div/div[3]/div[4]/div[1]/div[2]/div[1]/p/text()
+#selector=/html/body/form/div[3]/div/div/div[3]/div[4]/div[1]/div[2]/div[1]/p/text()
 #element_title=Out of Stock
 #check=not_contains
 #message_header=$title back in stock
 #message_body=$url
 
-# Motherboard
-title=GIGABYTE B550i (CC)
-url=https://www.canadacomputers.com/product_info.php?cPath=26_1832_1833&item_id=169756
-xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
-element_title=-
-check=not_contains
-message_header=$title back in stock
-message_body=$url
-
-title=GIGABYTE B550i (CC:OTTAWA)
-url=https://www.canadacomputers.com/product_info.php?cPath=26_1832_1833&item_id=169756
-xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
-element_title=-
-check=not_contains
-message_header=$title back in stock
-message_body=$url
-
-title=Gigabyte B550i (ME)
-url=https://www.memoryexpress.com/Products/MX00112703
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[5]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
-element_title=Out of Stock
-check=not_contains
-message_header=$title back in stock
-message_body=$url
-
-title=Gigabyte B550i (ME:OTTAWA)
-url=https://www.memoryexpress.com/Products/MX00112703
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[5]/section/div[2]/div/div[2]/div/div/ul/li[4]/div[2]/ul/li[3]/div/span[2]/text()
-element_title=Out of Stock
-check=not_contains
-message_header=$title back in stock
-message_body=$url
-
-title=Gigabyte B550i (Newegg)
-url=https://www.newegg.ca/gigabyte-b550i-aorus-pro-ax/p/N82E16813145222?Item=N82E16813145222
-xpath=/html/body/div[6]/div[2]/div[1]/div/div/div[1]/div[1]/div[1]/div/div/span/text()
-element_title=OUT OF STOCK
-check=not_contains
-message_header=$title back in stock
-message_body=$url
-
 #PSU
 title=SF Series SF750 (ME)
 url=https://www.memoryexpress.com/Products/MX76944
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[5]/section/div[2]/div/div[3]/div[2]/div[1]/span[2]/text()
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__details > div.c-capr-inventory-selector__details-online > div.c-capr-inventory-store > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
 element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
@@ -390,7 +340,7 @@ message_body=$url
 
 title=SF Series SF750 (ME:OTTAWA)
 url=https://www.memoryexpress.com/Products/MX76944
-xpath=/html/body/section/section/div/div[3]/div[3]/div[2]/article/section[2]/aside/section/div[1]/div/div[5]/section/div[2]/div/div[2]/div/div/ul/li[4]/div[2]/ul/li[3]/div/span[2]/text()
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__details > div.c-capr-inventory-selector__details-online > div.c-capr-inventory-store > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
 element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
@@ -398,7 +348,7 @@ message_body=$url
 
 title=CORSAIR SF750 80 Plus Platinum (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=441&item_id=134743
-xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(2) > div:nth-child(1) > div > div.col-3.justify-content-end > div > p > span > strong
 element_title=-
 check=not_contains
 message_header=$title back in stock
@@ -406,7 +356,7 @@ message_body=$url
 
 title=CORSAIR SF750 80 Plus Platinum (CC:OTTAWA)
 url=https://www.canadacomputers.com/product_info.php?cPath=441&item_id=134743
-xpath=/html/body/div[4]/div[1]/div/div[3]/div[2]/div[3]/form[1]/div[2]/div[3]/div[1]/div[1]/div/div[2]/div/p/span/strong/text()
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(2) > div:nth-child(1) > div > div.col-3.justify-content-end > div > p > span > strong
 element_title=-
 check=not_contains
 message_header=$title back in stock

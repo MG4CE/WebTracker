@@ -1,4 +1,5 @@
 import scrapy
+from scrapy.selector import Selector
 
 class HTMLSpider(scrapy.Spider):
     name = "HTMLSpider"
@@ -13,8 +14,10 @@ class HTMLSpider(scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse, cb_kwargs=dict(track=track))
 
     def parse(self, response, track): 
-        text = response.xpath(track["xpath"]).get()
+        try:
+            text = response.css(track["selector"]+"::text").get()
+            track["result"] = text
+        except:
+            raise Exception(ValueError, response.url + " failed to parse, make sure selector is correct!")
         track["response_url"] = response.url
-        track["result"] = text
-        #print(track)
         yield track
