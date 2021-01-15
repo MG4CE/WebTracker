@@ -17,8 +17,8 @@ class HTMLSpider(scrapy.Spider):
         try:
             text = response.css(track["selector"]+"::text").get()
             track["result"] = text
+            track["response_url"] = response.url
         except Exception as err:
             #print(response.url + " failed to parse, make sure selector is correct!")
             print(err)
-        track["response_url"] = response.url
         yield track
