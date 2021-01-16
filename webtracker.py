@@ -39,10 +39,10 @@ class WebTracker():
                 elif track["trigger"]:
                     mailer.send_email(self.config_info["sender_email"], self.config_info["sender_email_password"], self.config_info["recipient_email"], 
                     parse.message_format(track, track["message_header"]), parse.message_format(track, track["message_body"]))      
-                time.sleep(int(self.config_info["timeout"]))
             except Exception as err:
                 mailer.send_email(self.config_info["sender_email"], self.config_info["sender_email_password"], self.config_info["recipient_email"], 
                 parse.message_format(track, "$title failure"), parse.message_format(track, "$url \n" + err))
+            time.sleep(int(track["timer"]))
 
 
     def start_thread(self):    
@@ -68,7 +68,7 @@ class WebTracker():
                     mailer.send_email(self.config_info["sender_email"], self.config_info["sender_email_password"], self.config_info["recipient_email"], 
                     parse.message_format(track, track["message_header"]), parse.message_format(track, track["message_body"]))
             job = Job(HTMLSpider, tracks=tracks)
-            time.sleep(int(self.config_info["timeout"]))
+            time.sleep(int(track["timer"]))
 
 
 if __name__ == "__main__":

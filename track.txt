@@ -23,6 +23,7 @@ element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=ASUS TUF Gaming NVIDIA GeForce RTX 3080 (Newegg)
 url=https://www.newegg.ca/asus-geforce-rtx-3080-tuf-rtx3080-10g-gaming/p/N82E16814126453?Description=3080&cm_re=3080-_-14-126-453-_-Product
@@ -31,6 +32,7 @@ element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=EVGA GeForce RTX 3080 FTW3 (Newegg)
 url=https://www.newegg.ca/evga-geforce-rtx-3080-10g-p5-3895-kr/p/N82E16814487519?Description=3080&cm_re=3080-_-14-487-519-_-Product
@@ -39,6 +41,7 @@ element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=ASUS ROG Strix GeForce RTX 3080 (Newegg)
 url=https://www.newegg.ca/asus-geforce-rtx-3080-rog-strix-rtx3080-o10g-gaming/p/N82E16814126457?Description=3080&cm_re=3080-_-14-126-457-_-Product
@@ -47,6 +50,7 @@ element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=GIGABYTE AORUS GeForce RTX 3080 (Newegg)
 url=https://www.newegg.ca/gigabyte-geforce-rtx-3080-gv-n3080aorus-m-10gd/p/N82E16814932336?Description=rtx%203080&cm_re=rtx_3080-_-14-932-336-_-Product
@@ -55,6 +59,7 @@ element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=GIGABYTE AORUS GeForce RTX 3080 (Newegg)
 url=https://www.newegg.ca/gigabyte-geforce-rtx-3080-gv-n3080aorus-m-10gd/p/N82E16814932336?Description=rtx%203080&cm_re=rtx_3080-_-14-932-336-_-Product
@@ -63,6 +68,7 @@ element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=MSI GeForce RTX 3080 GAMING X TRIO (Newegg)
 url=https://www.newegg.ca/msi-geforce-rtx-3080-rtx-3080-gaming-x-trio-10g/p/N82E16814137597
@@ -71,6 +77,7 @@ element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=ASUS ROG Strix NVIDIA GeForce RTX 3080 (BestBuy)
 url=https://www.bestbuy.ca/en-ca/product/asus-rog-strix-nvidia-geforce-rtx-3080-10gb-gddr6x-video-card/14954116
@@ -79,6 +86,7 @@ element_title=Coming soon
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=ASUS TUF Gaming NVIDIA GeForce RTX 3080 (BestBuy)
 url=https://www.bestbuy.ca/en-ca/product/asus-tuf-gaming-nvidia-geforce-rtx-3080-10gb-gddr6x-video-card/14953248
@@ -87,6 +95,7 @@ element_title=Coming soon
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=EVGA GeForce RTX 3080 FTW3 ULTRA (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181376
@@ -95,6 +104,7 @@ element_title=-
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=ASUS ROG Strix GeForce RTX 3080 (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181842
@@ -103,6 +113,7 @@ element_title=-
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=ASUS TUF Gaming GeForce RTX 3080 OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181415
@@ -111,6 +122,7 @@ element_title=-
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=GIGABYTE AORUS GeForce RTX 3080 MASTER (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=182754
@@ -119,6 +131,7 @@ element_title=-
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=GIGABYTE GeForce RTX 3080 VISION OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=182755
@@ -127,6 +140,7 @@ element_title=-
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=GIGABYTE GeForce RTX 3080 GAMING OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181353
@@ -135,6 +149,7 @@ element_title=-
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=Gigabyte AORUS GeForce RTX 3080 XTREME (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183098
@@ -143,6 +158,7 @@ element_title=-
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=MSI GeForce RTX 3080 Gaming X Trio (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181348&language=en
@@ -151,6 +167,79 @@ element_title=-
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
+
+title=EVGA GeForce RTX 3080 FTW3 ULTRA (CC:OTTAWA)
+url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181376
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(4) > div:nth-child(19) > div > div.col-3.justify-content-end > div > p > span > strong
+element_title=-
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=ASUS ROG Strix GeForce RTX 3080 (CC:OTTAWA)
+url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181842
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(4) > div:nth-child(19) > div > div.col-3.justify-content-end > div > p > span > strong
+element_title=-
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=ASUS TUF Gaming GeForce RTX 3080 OC (CC:OTTAWA)
+url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181415
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(4) > div:nth-child(19) > div > div.col-3.justify-content-end > div > p > span > strong
+element_title=-
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=GIGABYTE AORUS GeForce RTX 3080 MASTER (CC:OTTAWA)
+url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=182754
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(4) > div:nth-child(19) > div > div.col-3.justify-content-end > div > p > span > strong
+element_title=-
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=GIGABYTE GeForce RTX 3080 VISION OC (CC:OTTAWA)
+url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=182755
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(4) > div:nth-child(19) > div > div.col-3.justify-content-end > div > p > span > strong
+element_title=-
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=GIGABYTE GeForce RTX 3080 GAMING OC (CC:OTTAWA)
+url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181353
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(4) > div:nth-child(19) > div > div.col-3.justify-content-end > div > p > span > strong
+element_title=-
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=Gigabyte AORUS GeForce RTX 3080 XTREME (CC:OTTAWA)
+url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183098
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(4) > div:nth-child(19) > div > div.col-3.justify-content-end > div > p > span > strong
+element_title=-
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=MSI GeForce RTX 3080 Gaming X Trio (CC:OTTAWA)
+url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181348&language=en
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(4) > div:nth-child(19) > div > div.col-3.justify-content-end > div > p > span > strong
+element_title=-
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
 
 title=TUF RTX 3080 OC GAMING GeForce RTX 3080 (ME)
 url=https://www.memoryexpress.com/Products/MX00114003
@@ -159,6 +248,7 @@ element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=GeForce RTX 3080 FTW3 ULTRA GAMING (ME)
 url=https://www.memoryexpress.com/Products/MX00113957
@@ -167,6 +257,7 @@ element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=ROG STRIX RTX3080 OC (ME)
 url=https://www.memoryexpress.com/Products/MX00114092
@@ -175,6 +266,7 @@ element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=AORUS MASTER GeForce RTX 3080 (ME)
 url=https://www.memoryexpress.com/Products/MX00114312
@@ -183,6 +275,7 @@ element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=GeForce RTX 3080 Gaming OC (ME)
 url=https://www.memoryexpress.com/Products/MX00113954
@@ -191,6 +284,7 @@ element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=AORUS XTREME GeForce RTX 3080 (ME)
 url=https://www.memoryexpress.com/Products/MX00114404
@@ -199,6 +293,7 @@ element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=GeForce RTX 3080 FTW3 ULTRA GAMING (ME)
 url=https://www.memoryexpress.com/Products/MX00114024
@@ -207,6 +302,7 @@ element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=GeForce RTX 3080 VISION OC (ME)
 url=https://www.memoryexpress.com/Products/MX00114313
@@ -215,6 +311,7 @@ element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=GeForce RTX 3080 Gaming X Trio (ME)
 url=https://www.memoryexpress.com/Products/MX00113957
@@ -223,22 +320,89 @@ element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
-#title=EVGA GeForce RTX 3080 FTW3 GAMING (EVGA)
-#url=https://www.evga.com/products/productlist.aspx?type=0&family=GeForce+30+Series+Family&chipset=RTX+3080
-#selector=/html/body/form/div[3]/div/div/div[3]/div[5]/div/div[5]/div[2]/div[1]/div/span[1]/text()
-#element_title=Out of Stock
-#check=not_contains
-#message_header=$title back in stock
-#message_body=$url
+title=TUF RTX 3080 OC GAMING GeForce RTX 3080 (ME:OTTAWA)
+url=https://www.memoryexpress.com/Products/MX00114003
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__dropdown-container > div > div > ul > li:nth-child(4) > div.c-capr-inventory-region > ul > li:nth-child(3) > div > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
+element_title=Out of Stock
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
 
-#title=EVGA GeForce RTX 3080 FTW3 ULTRA GAMING (EVGA)
-#url=https://www.evga.com/products/product.aspx?pn=10G-P5-3897-KR
-#selector=/html/body/form/div[3]/div/div/div[3]/div[4]/div[1]/div[2]/div[1]/p/text()
-#element_title=Out of Stock
-#check=not_contains
-#message_header=$title back in stock
-#message_body=$url
+title=GeForce RTX 3080 FTW3 ULTRA GAMING (ME:OTTAWA)
+url=https://www.memoryexpress.com/Products/MX00113957
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__dropdown-container > div > div > ul > li:nth-child(4) > div.c-capr-inventory-region > ul > li:nth-child(3) > div > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
+element_title=Out of Stock
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=ROG STRIX RTX3080 OC (ME:OTTAWA)
+url=https://www.memoryexpress.com/Products/MX00114092
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__dropdown-container > div > div > ul > li:nth-child(4) > div.c-capr-inventory-region > ul > li:nth-child(3) > div > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
+element_title=Out of Stock
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=AORUS MASTER GeForce RTX 3080 (ME:OTTAWA)
+url=https://www.memoryexpress.com/Products/MX00114312
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__dropdown-container > div > div > ul > li:nth-child(4) > div.c-capr-inventory-region > ul > li:nth-child(3) > div > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
+element_title=Out of Stock
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=GeForce RTX 3080 Gaming OC (ME:OTTAWA)
+url=https://www.memoryexpress.com/Products/MX00113954
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__dropdown-container > div > div > ul > li:nth-child(4) > div.c-capr-inventory-region > ul > li:nth-child(3) > div > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
+element_title=Out of Stock
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=AORUS XTREME GeForce RTX 3080 (ME:OTTAWA)
+url=https://www.memoryexpress.com/Products/MX00114404
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__dropdown-container > div > div > ul > li:nth-child(4) > div.c-capr-inventory-region > ul > li:nth-child(3) > div > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
+element_title=Out of Stock
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=GeForce RTX 3080 FTW3 ULTRA GAMING (ME:OTTAWA)
+url=https://www.memoryexpress.com/Products/MX00114024
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__dropdown-container > div > div > ul > li:nth-child(4) > div.c-capr-inventory-region > ul > li:nth-child(3) > div > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
+element_title=Out of Stock
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=GeForce RTX 3080 VISION OC (ME:OTTAWA)
+url=https://www.memoryexpress.com/Products/MX00114313
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__dropdown-container > div > div > ul > li:nth-child(4) > div.c-capr-inventory-region > ul > li:nth-child(3) > div > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
+element_title=Out of Stock
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=GeForce RTX 3080 Gaming X Trio (ME:OTTAWA)
+url=https://www.memoryexpress.com/Products/MX00113957
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__dropdown-container > div > div > ul > li:nth-child(4) > div.c-capr-inventory-region > ul > li:nth-child(3) > div > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
+element_title=Out of Stock
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
 
 # RTX 3070
 title=ASUS TUF Gaming GeForce RTX 3070 (Newegg)
@@ -248,6 +412,7 @@ element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=NVIDIA GeForce RTX 3070 (BestBuy)
 url=https://www.bestbuy.ca/en-ca/product/nvidia-geforce-rtx-3070-8gb-gddr6-video-card-only-at-best-buy/15078017
@@ -256,6 +421,7 @@ element_title=Coming soon
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=ASUS TUF Gaming GeForce RTX 3070 OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183638
@@ -264,6 +430,7 @@ element_title=-
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=GIGABYTE GeForce RTX 3070 GAMING OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183099
@@ -272,6 +439,61 @@ element_title=-
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
+
+title=ASUS TUF Gaming GeForce RTX 3070 OC (CC:OTTAWA)
+url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183638
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(4) > div:nth-child(19) > div > div.col-3.justify-content-end > div > p > span > strong
+element_title=-
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=GIGABYTE GeForce RTX 3070 GAMING OC (CC:OTTAWA)
+url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183099
+selector=#pi-form > div.col-12.py-2 > div.stocklevel-pop > div:nth-child(4) > div:nth-child(19) > div > div.col-3.justify-content-end > div > p > span > strong
+element_title=-
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=AORUS GeForce RTX 3070 Master (ME:OTTAWA)
+url=https://www.memoryexpress.com/Products/MX00114688
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__dropdown-container > div > div > ul > li:nth-child(4) > div.c-capr-inventory-region > ul > li:nth-child(3) > div > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
+element_title=Out of Stock
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=GeForce RTX 3070 GAMING OC (ME:OTTAWA)
+url=https://www.memoryexpress.com/Products/MX00114405
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__dropdown-container > div > div > ul > li:nth-child(4) > div.c-capr-inventory-region > ul > li:nth-child(3) > div > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
+element_title=Out of Stock
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=GeForce RTX 3070 Vision OC (ME:OTTAWA)
+url=https://www.memoryexpress.com/Products/MX00114689
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__dropdown-container > div > div > ul > li:nth-child(4) > div.c-capr-inventory-region > ul > li:nth-child(3) > div > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
+element_title=Out of Stock
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
+
+title=TUF RTX 3070 OC (ME:OTTAWA)
+url=https://www.memoryexpress.com/Products/MX00114567
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__dropdown-container > div > div > ul > li:nth-child(4) > div.c-capr-inventory-region > ul > li:nth-child(3) > div > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
+element_title=Out of Stock
+check=not_contains
+message_header=$title back in stock
+message_body=$url
+timer=30
 
 title=AORUS GeForce RTX 3070 Master (ME)
 url=https://www.memoryexpress.com/Products/MX00114688
@@ -280,6 +502,7 @@ element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=GeForce RTX 3070 GAMING OC (ME)
 url=https://www.memoryexpress.com/Products/MX00114405
@@ -288,6 +511,7 @@ element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=GeForce RTX 3070 Vision OC (ME)
 url=https://www.memoryexpress.com/Products/MX00114689
@@ -296,6 +520,7 @@ element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=15
 
 title=TUF RTX 3070 OC (ME)
 url=https://www.memoryexpress.com/Products/MX00114567
@@ -304,30 +529,7 @@ element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
-
-#title=EVGA GeForce RTX 3070 XC3 ULTRA GAMING (EVGA)
-#url=https://www.evga.com/products/product.aspx?pn=08G-P5-3755-KR
-#selector=/html/body/form/div[3]/div/div/div[3]/div[4]/div[1]/div[2]/div[1]/p/text()
-#element_title=Out of Stock
-#check=not_contains
-#message_header=$title back in stock
-#message_body=$url
-
-#title=EVGA GeForce RTX 3070 XC3 GAMING (EVGA)
-#url=https://www.evga.com/products/product.aspx?pn=08G-P5-3753-KR
-#selector=/html/body/form/div[3]/div/div/div[3]/div[4]/div[1]/div[2]/div[1]/p/text()
-#element_title=Out of Stock
-#check=not_contains
-#message_header=$title back in stock
-#message_body=$url
-
-#title=EVGA GeForce RTX 3070 FTW3 ULTRA GAMING (EVGA)
-#url=https://www.evga.com/products/product.aspx?pn=08G-P5-3767-KR
-#selector=/html/body/form/div[3]/div/div/div[3]/div[4]/div[1]/div[2]/div[1]/p/text()
-#element_title=Out of Stock
-#check=not_contains
-#message_header=$title back in stock
-#message_body=$url
+timer=15
 
 #PSU
 title=SF Series SF750 (ME)
@@ -337,14 +539,16 @@ element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=30
 
 title=SF Series SF750 (ME:OTTAWA)
 url=https://www.memoryexpress.com/Products/MX76944
-selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__details > div.c-capr-inventory-selector__details-online > div.c-capr-inventory-store > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
+selector=#ProductDetailsPanel > div.c-capr-panel__inventory > section > div.c-capr-inventory__selector > div > div.c-capr-inventory-selector__dropdown-container > div > div > ul > li:nth-child(4) > div.c-capr-inventory-region > ul > li:nth-child(3) > div > span.c-capr-inventory-store__availability.InventoryState_OutOfStock
 element_title=Out of Stock
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=30
 
 title=CORSAIR SF750 80 Plus Platinum (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=441&item_id=134743
@@ -353,6 +557,7 @@ element_title=-
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=30
 
 title=CORSAIR SF750 80 Plus Platinum (CC:OTTAWA)
 url=https://www.canadacomputers.com/product_info.php?cPath=441&item_id=134743
@@ -361,3 +566,4 @@ element_title=-
 check=not_contains
 message_header=$title back in stock
 message_body=$url
+timer=30
