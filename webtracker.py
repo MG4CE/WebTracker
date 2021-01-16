@@ -6,6 +6,8 @@ import time
 import threading
 import datetime
 
+logging.basicConfig(filename='event.log', filemode='w', format='%(levelname)s - %(message)s', level=logging.DEBUG)
+
 from scrapyscript import Job, Processor
 from webtracker_scrapy.spiders.html_spider import HTMLSpider
 
@@ -35,13 +37,15 @@ class WebTracker():
                 t = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                 print("[" + t + "]", "\"" + track["title"] + "\"", "command:", track["check"],"expected:", track["element_title"], "actual:", track["result"])
                 if track["redirect"]:
-                    print("[" + t + "]", "\"" + track["title"] + "\"", "respone URL is not equal to request!")
+                   logging.debug("[" + t + "] " + "\"" + track["title"] + "\" "+ "respone URL is not equal to request!")
                 elif track["trigger"]:
+                    logging.debug("[" + t + "] " + "\"" + track["title"] + "\" " + "command: " + "\" " + track["check"] + "\" " + " expected: " + "\" " + track["element_title"] + "\" " + " actual: " + "\" " + track["result"] + "\"")
                     mailer.send_email(self.config_info["sender_email"], self.config_info["sender_email_password"], self.config_info["recipient_email"], 
                     parse.message_format(track, track["message_header"]), parse.message_format(track, track["message_body"]))      
             except Exception as err:
-                mailer.send_email(self.config_info["sender_email"], self.config_info["sender_email_password"], self.config_info["recipient_email"], 
+                mailer.send_email(self.config_info["sender_email"], self.config_info["sender_email_password"], self.config_info["recipient_email"],
                 parse.message_format(track, "$title failure"), parse.message_format(track, "$url \n" + err))
+                logging.debug(track, err)
             time.sleep(int(track["timer"]))
 
 

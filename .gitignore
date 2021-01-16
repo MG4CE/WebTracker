@@ -1,0 +1,10 @@
+__pycache__/
+test.py
+prototypes/
+.vscode/
+.idea/
+config.cfg
+webtracker/__pycache__
+webtracker/spider/__pycache__
+track_test.txt
+event.log

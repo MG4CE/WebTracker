@@ -77,7 +77,7 @@ element_title=OUT OF STOCK.
 check=not_contains
 message_header=$title back in stock
 message_body=$url
-timer=15
+timer=30
 
 title=ASUS ROG Strix NVIDIA GeForce RTX 3080 (BestBuy)
 url=https://www.bestbuy.ca/en-ca/product/asus-rog-strix-nvidia-geforce-rtx-3080-10gb-gddr6x-video-card/14954116
@@ -86,7 +86,7 @@ element_title=Coming soon
 check=not_contains
 message_header=$title back in stock
 message_body=$url
-timer=15
+timer=30
 
 title=ASUS TUF Gaming NVIDIA GeForce RTX 3080 (BestBuy)
 url=https://www.bestbuy.ca/en-ca/product/asus-tuf-gaming-nvidia-geforce-rtx-3080-10gb-gddr6x-video-card/14953248
@@ -95,7 +95,7 @@ element_title=Coming soon
 check=not_contains
 message_header=$title back in stock
 message_body=$url
-timer=15
+timer=30
 
 title=EVGA GeForce RTX 3080 FTW3 ULTRA (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=181376
@@ -421,7 +421,7 @@ element_title=Coming soon
 check=not_contains
 message_header=$title back in stock
 message_body=$url
-timer=15
+timer=30
 
 title=ASUS TUF Gaming GeForce RTX 3070 OC (CC)
 url=https://www.canadacomputers.com/product_info.php?cPath=43_557_559&item_id=183638
